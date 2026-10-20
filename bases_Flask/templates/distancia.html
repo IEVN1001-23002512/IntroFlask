@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+        {% block container%}
+
+    <form action="/distancia" method="post">
+ 
+<div class="mb-3">
+ 
+    <label for="p1" class="form-label">Punto 1:</label>
+    <label for="x1" class="form-label">Posición X:</label>
+    <input type="number" class="form-control" id="x1" name="x1">
+    <label for="y1" class="form-label">Posición Y:</label>
+    <input type="number" class="form-control" id="y1" name="y1">
+</div>
+<div class="mb-3">
+ 
+    <label for="p2" class="form-label">Punto 2:</label>
+    <label for="x2" class="form-label">Posición X:</label>
+    <input type="number" class="form-control" id="x2" name="x2">
+    <label for="y2" class="form-label">Posición Y:</label>
+    <input type="number" class="form-control" id="y2" name="y2">
+</div>
+ 
+ 
+<button type="submit" class="btn btn-primary">Calcular</button>
+</form>
+ 
+<h1>
+    La distancia entre el punto 1 y el punto 2 es {{ "%.2f"|format(dis)}}
+</h1>
+
+    {%endblock%}
